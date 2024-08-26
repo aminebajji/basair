@@ -13,10 +13,10 @@ export default function MobileNav() {
         <SheetContent side="right">
           <Link href="/">
             <Image
-              src="/basair-logo.png"
-              alt="شعار نادي المدرسة الإسلامية"
-              width={120}
-              height={120}
+              src="/logo-basair.png"
+              alt="logo-basair"
+              width={85}
+              height={85}
             />
           </Link>
           <nav className="flex flex-col gap-3 lg:gap-4 mt-6">

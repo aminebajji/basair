@@ -6,9 +6,9 @@ export function MainNav() {
       <Link href="/" className="flex items-center mr-6 space-x-2">
         <Image
           src="/logo-basair.png"
-          alt="FT Hub Logo"
-          width={60}
-          height={60}
+          alt="logo-basair"
+          width={85}
+          height={85}
         />
       </Link>
       <nav className=" flex items-center gap-6 text-sm">
