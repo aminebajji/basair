@@ -1,3 +1,4 @@
+import AboutUs from "@/components/about-us";
 import Carousel from "@/components/carousel";
 import { SiteHeader } from "@/components/layout/site-header";
 import Image from "next/image";
@@ -7,6 +8,7 @@ export default function Home() {
   return (
     <>
       <Carousel />
+      <AboutUs />
     </>
   );
 }
