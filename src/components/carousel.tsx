@@ -39,14 +39,19 @@ const events = [
 
 export default function Component() {
   return (
-    <section className="w-full py-12 md:py-24 lg:py-32 bg-gradient-to-r from-bs-secondary to-primary">
-      <div className="container px-4 md:px-6">
-        <div className="p-8 rounded-md border-2">
-          <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none text-white text-center leading-loose">
-            قُلْ هَٰذِهِ سَبِيلِي أَدْعُو إِلَى اللَّهِ ۚ عَلَىٰ بَصِيرَةٍ أَنَا
-            وَمَنِ اتَّبَعَنِي ۖ وَسُبْحَانَ اللَّهِ وَمَا أَنَا مِنَ
-            الْمُشْرِكِينَ
-          </h1>
+    <section className="w-full py-12 md:py-10 lg:py-10 bg-gradient-to-r from-bs-secondary to-primary">
+      <div className="container px-4 space-y-8 md:px-6">
+        <div className="flex justify-center">
+          <div className="p-4 rounded-xl border-2">
+            <h1 className="text-xl font-bold tracking-tighter sm:text-2xl md:text-3xl lg:text-3xl/none text-white text-center leading-normal md:leading-normal lg:leading-normal">
+              قُلْ هَٰذِهِ سَبِيلِي أَدْعُو إِلَى اللَّهِ ۚ عَلَىٰ بَصِيرَةٍ
+              أَنَا وَمَنِ اتَّبَعَنِي ۖ وَسُبْحَانَ اللَّهِ وَمَا أَنَا مِنَ
+              الْمُشْرِكِينَ
+            </h1>
+            <h1 className="text-white text-lg">
+              سورة : يوسف - الآية : (108) - الجزء : ( 13 ) - الصفحة: ( 248 )
+            </h1>
+          </div>
         </div>
 
         <Carousel className="w-full max-w-4xl lg:max-w-5xl xl:max-w-6xl mx-auto">

@@ -16,7 +16,9 @@ export function SiteHeader() {
         <div className="order-2 flex items-center space-x-4 space-x-reverse md:hidden">
           <div className="flex space-x-4 space-x-reverse md:hidden">
             <Button className="rounded-xl">ادعمنا</Button>
-            <Button className="rounded-xl">ادعمنا</Button>
+            <Button className="rounded-xl" variant="outline">
+              انضم إلينا
+            </Button>
           </div>
           <MobileNav />
         </div>
@@ -29,7 +31,7 @@ export function SiteHeader() {
           />
         </Link>
         <div className="hidden md:flex md:space-x-2 md:space-x-reverse">
-          <Button className="rounded-xl">ادعمنا</Button>
+          <Button className="rounded-xl border-1 border-border">ادعمنا</Button>
           <Button className="rounded-xl" variant="outline">
             انضم إلينا
           </Button>
