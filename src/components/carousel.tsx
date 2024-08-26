@@ -14,26 +14,25 @@ const events = [
     title: "Annual Science Fair",
     description:
       "Showcase your innovative projects and compete with fellow science enthusiasts.",
-    image:
-      "https://unsplash.com/photos/people-walking-near-white-concrete-building-during-daytime-4rBFrxSfzb0",
+    image: "https://drive.google.com/uc?id=11UsPQ5GcvEh82Eyyne3S7mfiwykaAcnd",
   },
   {
     title: "Debate Club Championship",
     description:
       "Sharpen your argumentation skills and represent our school in the regional debate tournament.",
-    image: "/placeholder.svg?height=600&width=1200",
+    image: "https://drive.google.com/uc?id=11UsPQ5GcvEh82Eyyne3S7mfiwykaAcnd",
   },
   {
     title: "Art Club Exhibition",
     description:
       "Display your artistic creations and explore various mediums in our end-of-year art show.",
-    image: "/placeholder.svg?height=600&width=1200",
+    image: "https://drive.google.com/uc?id=11UsPQ5GcvEh82Eyyne3S7mfiwykaAcnd",
   },
   {
     title: "Coding Workshop Series",
     description:
       "Learn the basics of programming and build your first web application in this hands-on workshop.",
-    image: "/placeholder.svg?height=600&width=1200",
+    image: "https://drive.google.com/uc?id=11UsPQ5GcvEh82Eyyne3S7mfiwykaAcnd",
   },
 ];
 
