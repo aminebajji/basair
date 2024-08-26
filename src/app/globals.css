@@ -67,3 +67,8 @@
     @apply bg-background text-foreground;
   }
 }
+
+html {
+  direction: rtl;
+  text-align: right;
+}

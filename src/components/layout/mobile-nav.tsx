@@ -2,6 +2,7 @@ import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { AlignJustify } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+
 export default function MobileNav() {
   return (
     <div className="md:hidden">
@@ -9,28 +10,51 @@ export default function MobileNav() {
         <SheetTrigger>
           <AlignJustify />
         </SheetTrigger>
-        <SheetContent side="left">
+        <SheetContent side="right">
           <Link href="/">
-            <Image src="/FTlogo.png" alt="FT Hub Logo" width={40} height={40} />
+            <Image
+              src="/basair-logo.png"
+              alt="شعار نادي المدرسة الإسلامية"
+              width={120}
+              height={120}
+            />
           </Link>
           <nav className="flex flex-col gap-3 lg:gap-4 mt-6">
             <Link
-              href=""
+              href="/"
               className="text-foreground/60 transition-colors hover:text-foreground"
             >
-              Docs
+              الرئيسية
             </Link>
             <Link
-              href=""
+              href="/about"
               className="text-foreground/60 transition-colors hover:text-foreground"
             >
-              Teams
+              من نحن
+            </Link>
+            <Link
+              href="/events"
+              className="text-foreground/60 transition-colors hover:text-foreground"
+            >
+              الفعاليات
+            </Link>
+            <Link
+              href="/activities"
+              className="text-foreground/60 transition-colors hover:text-foreground"
+            >
+              الأنشطة
+            </Link>
+            <Link
+              href="/join"
+              className="text-foreground/60 transition-colors hover:text-foreground"
+            >
+              انضم إلينا
             </Link>
             <Link
               href="/contact"
               className="text-foreground/60 transition-colors hover:text-foreground"
             >
-              Pricing
+              تواصل معنا
             </Link>
           </nav>
         </SheetContent>

@@ -2,7 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 export function MainNav() {
   return (
-    <div className="hidden md:flex items-center" dir="rtl">
+    <div className="hidden md:flex items-center">
       <Link href="/" className="flex items-center mr-6 space-x-2">
         <Image
           src="/basair-logo.png"
