@@ -39,7 +39,7 @@ const events = [
 export default function Component() {
   return (
     <section className="w-full py-12 md:py-10 lg:py-10 bg-gradient-to-r from-bs-secondary to-primary">
-      <div className="container px-4 space-y-8 md:px-6">
+      <div className="container px-4 space-y-4 md:px-6">
         <div className="flex justify-center">
           <div className="p-4 rounded-xl border-2">
             <h1 className="text-xl font-bold tracking-tighter sm:text-2xl md:text-3xl lg:text-3xl/none text-white text-center leading-normal md:leading-normal lg:leading-normal">
