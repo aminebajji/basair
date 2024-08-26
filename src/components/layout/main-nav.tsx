@@ -2,13 +2,13 @@ import Link from "next/link";
 import Image from "next/image";
 export function MainNav() {
   return (
-    <div className="hidden md:flex items-center">
+    <div className="hidden md:flex items-center space-x-8 space-x-reverse">
       <Link href="/" className="flex items-center mr-6 space-x-2">
         <Image
-          src="/basair-logo.png"
+          src="/logo-basair.png"
           alt="FT Hub Logo"
-          width={120}
-          height={120}
+          width={60}
+          height={60}
         />
       </Link>
       <nav className=" flex items-center gap-6 text-sm">
