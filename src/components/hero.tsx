@@ -11,37 +11,31 @@ import {
 // Sample event data with images
 const events = [
   {
-    title: "Annual Science Fair",
+    title: "دورات في حفظ القرآن",
     description:
-      "Showcase your innovative projects and compete with fellow science enthusiasts.",
-    image: "https://drive.google.com/uc?id=11UsPQ5GcvEh82Eyyne3S7mfiwykaAcnd",
+      "قال ابن مسعود رضي الله عنه: إن هذه القلوب أوعية فاشغلوها بالقرآن، ولا تشغلوها بغيره",
+    image: "/quran.png",
   },
   {
-    title: "Debate Club Championship",
+    title: "دورات في تصحيح التلاوة وتعليم التجويد",
     description:
-      "Sharpen your argumentation skills and represent our school in the regional debate tournament.",
-    image: "https://drive.google.com/uc?id=11UsPQ5GcvEh82Eyyne3S7mfiwykaAcnd",
+      "قال الله تعالى: {أَوْ زِدْ عَلَيْهِ وَرَتِّلِ الْقُرْآنَ تَرْتِيلًا} [المزمل:٤]",
+    image: "/tartel.jpeg",
   },
   {
-    title: "Art Club Exhibition",
+    title: "دورات في العلم الشرعي ومبادئ الدين",
     description:
-      "Display your artistic creations and explore various mediums in our end-of-year art show.",
-    image: "https://drive.google.com/uc?id=11UsPQ5GcvEh82Eyyne3S7mfiwykaAcnd",
-  },
-  {
-    title: "Coding Workshop Series",
-    description:
-      "Learn the basics of programming and build your first web application in this hands-on workshop.",
-    image: "https://drive.google.com/uc?id=11UsPQ5GcvEh82Eyyne3S7mfiwykaAcnd",
+      "إن فرض العين من العلم هو القدر الذي يتعين على المسلم تعلمه؛ مما يصحح به عقيدته، وعبادته، ومهنته التي يعمل بها؛ فقد قال رسول الله صلى الله عليه وسلم: طلب العلم فريضة على كل مسلم. رواه ابن ماجه، وصححه السيوطي",
+    image: "/ailm.png",
   },
 ];
 
-export default function Component() {
+export default function Hero() {
   return (
     <section className="w-full py-12 md:py-10 lg:py-10 bg-gradient-to-r from-bs-secondary to-primary">
-      <div className="container px-4 space-y-4 md:px-6">
-        <div className="flex justify-center">
-          <div className="p-4 rounded-xl border-2">
+      <div className="container sm:flex sm:items-center sm:space-x-2 sm:space-x-reverse px-4 space-y-4 md:px-6">
+        <div className="flex flex-col items-center space-y-4">
+          <div className="p-4 rounded-xl border-2 border-white">
             <h1 className="text-xl font-bold tracking-tighter sm:text-2xl md:text-3xl lg:text-3xl/none text-white text-center leading-normal md:leading-normal lg:leading-normal">
               قُلْ هَٰذِهِ سَبِيلِي أَدْعُو إِلَى اللَّهِ ۚ عَلَىٰ بَصِيرَةٍ
               أَنَا وَمَنِ اتَّبَعَنِي ۖ وَسُبْحَانَ اللَّهِ وَمَا أَنَا مِنَ
@@ -53,7 +47,7 @@ export default function Component() {
           </div>
         </div>
 
-        <Carousel className="w-full max-w-4xl lg:max-w-5xl xl:max-w-6xl mx-auto">
+        <Carousel className="w-full max-w-xl lg:max-w-4xl mx-auto" dir="ltr">
           <CarouselContent>
             {events.map((event, index) => (
               <CarouselItem key={index}>

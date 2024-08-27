@@ -21,6 +21,7 @@ import {
   CardFooter,
 } from "@/components/ui/card";
 import { CheckIcon } from "lucide-react";
+
 export default function JoinForm() {
   const [isENSAStudent, setIsENSAStudent] = useState(false);
   const [formData, setFormData] = useState({
@@ -52,10 +53,25 @@ export default function JoinForm() {
     }));
   };
 
-  const handleSubmit = (event: React.FormEvent) => {
+  const handleSubmit = async (event: React.FormEvent) => {
     event.preventDefault();
-    console.log("Form submitted", formData);
-    setFormSubmitted(true);
+    try {
+      await fetch("/api/send-email", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          to: formData.email,
+          subject: "Form Submission Confirmation",
+          text: `Hello ${formData.firstName},\n\nThank you for your submission!`,
+        }),
+      });
+      console.log("Email sent successfully");
+      setFormSubmitted(true);
+    } catch (error) {
+      console.error("Error sending email:", error);
+    }
   };
 
   return (
@@ -106,6 +122,7 @@ export default function JoinForm() {
             <div className="space-y-2">
               <Label htmlFor="phone">رقم الهاتف</Label>
               <Input
+                dir="rtl"
                 id="phone"
                 type="tel"
                 className="focus-visible:ring-primary"
@@ -207,8 +224,8 @@ export default function JoinForm() {
           {/* Success message */}
           {formSubmitted && (
             <div className="flex items-center gap-3 rounded-md bg-green-50 p-4 dark:bg-green-900/10 mt-4">
-              <div className="flex h-8 w-8 items-center justify-center rounded-full bg-green-500 text-white">
-                <CheckIcon className="h-5 w-5" />
+              <div className="h-4 w-4 flex items-center justify-center rounded-full bg-green-500 text-white  md:h-8 md:w-8">
+                <CheckIcon className="h-3 w-3 md:h-5 md:w-5" />
               </div>
               <div className="text-sm font-medium text-green-900 dark:text-green-50">
                 شكرا على اهتمامك، سوف نتواصل معك في وقت قريب إن شاء الله.
