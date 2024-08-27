@@ -31,10 +31,16 @@ export function SiteHeader() {
           />
         </Link>
         <div className="hidden md:flex md:space-x-2 md:space-x-reverse">
-          <Button className="rounded-xl border-1 border-border">ادعمنا</Button>
-          <Button className="rounded-xl" variant="outline">
-            انضم إلينا
-          </Button>
+          <Link href="/">
+            <Button className="rounded-xl border-1 border-border">
+              ادعمنا
+            </Button>
+          </Link>
+          <Link href="/join-us">
+            <Button className="rounded-xl" variant="outline">
+              انضم إلينا
+            </Button>
+          </Link>
         </div>
       </div>
     </header>
