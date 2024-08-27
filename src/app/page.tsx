@@ -1,4 +1,5 @@
 import AboutUs from "@/components/about-us";
+import Teams from "@/components/teams";
 import Hero from "@/components/hero";
 import { SiteHeader } from "@/components/layout/site-header";
 import Image from "next/image";
@@ -9,6 +10,7 @@ export default function Home() {
     <>
       <Hero />
       <AboutUs />
+      <Teams />
     </>
   );
 }
