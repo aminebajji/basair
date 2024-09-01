@@ -14,14 +14,6 @@ export function SiteHeader() {
       <div className="container h-14 flex items-center justify-between space-x-reverse">
         <MainNav />
         <div className="order-2 flex items-center space-x-4 space-x-reverse md:hidden">
-          <div className="flex space-x-2 space-x-reverse md:hidden">
-            <Button className="rounded-xl">ادعمنا</Button>
-            <Link href="/join-us">
-              <Button className="rounded-xl" variant="outline">
-                انضم إلينا
-              </Button>
-            </Link>
-          </div>
           <MobileNav />
         </div>
         <Link href="/" className="md:hidden">
@@ -32,18 +24,6 @@ export function SiteHeader() {
             height={85}
           />
         </Link>
-        <div className="hidden md:flex md:space-x-2 md:space-x-reverse">
-          <Link href="/">
-            <Button className="rounded-xl border-1 border-border">
-              ادعمنا
-            </Button>
-          </Link>
-          <Link href="/join-us">
-            <Button className="rounded-xl" variant="outline">
-              انضم إلينا
-            </Button>
-          </Link>
-        </div>
       </div>
     </header>
   );

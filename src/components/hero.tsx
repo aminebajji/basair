@@ -1,88 +1,46 @@
-import * as React from "react";
-import Image from "next/image";
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel";
+import Link from "next/link";
+import { Button } from "./ui/button";
+import { buttonVariants } from "./ui/button";
+import HeroCards from "./hero-cards";
+import CurvedUnderline from "./curved-underline";
 
-interface CurvedUnderlineProps {
-  width?: number;
-  height?: number;
-  startColor?: string;
-  endColor?: string;
-  strokeWidth?: number;
-}
-
-// Sample event data with images
-const events = [
-  {
-    title: "دورات في حفظ القرآن",
-    description:
-      "قال ابن مسعود رضي الله عنه: إن هذه القلوب أوعية فاشغلوها بالقرآن، ولا تشغلوها بغيره",
-    image: "/quran.png",
-  },
-  {
-    title: "دورات في تصحيح التلاوة وتعليم التجويد",
-    description:
-      "قال الله تعالى: {أَوْ زِدْ عَلَيْهِ وَرَتِّلِ الْقُرْآنَ تَرْتِيلًا} [المزمل:٤]",
-    image: "/tartel.jpeg",
-  },
-  {
-    title: "دورات في العلم الشرعي ومبادئ الدين",
-    description:
-      "إن فرض العين من العلم هو القدر الذي يتعين على المسلم تعلمه؛ مما يصحح به عقيدته، وعبادته، ومهنته التي يعمل بها؛ فقد قال رسول الله صلى الله عليه وسلم: طلب العلم فريضة على كل مسلم. رواه ابن ماجه، وصححه السيوطي",
-    image: "/ailm.png",
-  },
-];
-
-export default function Hero() {
+export const Hero = () => {
   return (
-    <div className="w-full py-12 md:py-10 lg:py-10 bg-gradient-to-r from-bs-secondary to-primary">
-      <div className="container sm:flex sm:items-center sm:space-x-2 sm:space-x-reverse px-4 space-y-4 md:px-6">
-        <div className="flex flex-col items-center space-y-4">
-          <div className="p-4 rounded-xl border-2 border-white">
-            <h1 className="text-xl font-bold tracking-tighter sm:text-2xl md:text-3xl lg:text-3xl/none text-white text-center leading-normal md:leading-normal lg:leading-normal">
-              قُلْ هَٰذِهِ سَبِيلِي أَدْعُو إِلَى اللَّهِ ۚ عَلَىٰ بَصِيرَةٍ
-              أَنَا وَمَنِ اتَّبَعَنِي ۖ وَسُبْحَانَ اللَّهِ وَمَا أَنَا مِنَ
-              الْمُشْرِكِينَ
+    <section className="relative w-full bg-gradient-to-br from-primary to-black overflow-hidden">
+      <div className="container grid lg:grid-cols-2 place-items-center pb-28 pt-20 md:pb-44 md:pt-20 gap-10">
+        <div className="text-center lg:text-start space-y-6">
+          <main className="text-5xl md:text-6xl font-bold">
+            <h1 className="inline">
+              <span className="inline text-white">نادي بصائر الدعوي</span>
             </h1>
-            <h1 className="text-white text-lg">
-              سورة : يوسف - الآية : (108) - الجزء : ( 13 ) - الصفحة: ( 248 )
-            </h1>
+          </main>
+
+          <p className="text-xl text-white md:w-10/12 mx-auto lg:mx-0">
+            إلى متى الغفلة ؟ فرُبّ إشراق لم يدرك زمن غروبه.
+          </p>
+
+          <div className="space-y-4 md:space-y-0 md:space-x-4">
+            <Link href="join-us">
+              <Button className="w-full md:w-1/3 bg-bs-secondary hover:bg-bs-secondary/90">
+                انضم إلينا الآن
+              </Button>
+            </Link>
           </div>
         </div>
 
-        <Carousel className="w-full max-w-xl lg:max-w-4xl mx-auto" dir="ltr">
-          <CarouselContent>
-            {events.map((event, index) => (
-              <CarouselItem key={index}>
-                <div className="relative overflow-hidden rounded-lg">
-                  <Image
-                    src={event.image}
-                    alt={`Image for ${event.title}`}
-                    width={1200}
-                    height={600}
-                    className="w-full h-[400px] md:h-[500px] object-cover"
-                  />
-                  <div className="absolute inset-0 bg-black bg-opacity-40 flex flex-col justify-end p-6">
-                    <h2 className="text-2xl md:text-3xl font-bold text-white mb-2 drop-shadow-lg">
-                      {event.title}
-                    </h2>
-                    <p className="text-white text-shadow-sm md:text-lg">
-                      {event.description}
-                    </p>
-                  </div>
-                </div>
-              </CarouselItem>
-            ))}
-          </CarouselContent>
-          <CarouselPrevious className="left-2 bg-white/80 hover:bg-white" />
-          <CarouselNext className="right-2 bg-white/80 hover:bg-white" />
-        </Carousel>
+        <div className="z-10">
+          <HeroCards />
+        </div>
       </div>
-    </div>
+      <div className="absolute inset-x-0 bottom-0 w-full h-32 md:h-40 lg:h-48 overflow-hidden">
+        <svg
+          className="w-full h-full text-white fill-current"
+          viewBox="0 0 1440 320"
+          preserveAspectRatio="none"
+        >
+          <path d="M0,160L48,149.3C96,139,192,117,288,128C384,139,480,181,576,181.3C672,181,768,139,864,128C960,117,1056,139,1152,149.3C1248,160,1344,160,1392,160L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z" />
+        </svg>
+      </div>
+    </section>
   );
-}
+};

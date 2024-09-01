@@ -4,7 +4,7 @@ import TitleLayout from "./layouts/title-layout";
 
 export default function Teams() {
   return (
-    <div className="w-full py-12 md:py-12">
+    <div className="mx-auto py-12 md:py-12">
       <div className="container px-4 md:px-6">
         <TitleLayout title="ننقسم إلى" />
         <div className="mt-8 space-y-8 space-x-reverse md:space-y-12">

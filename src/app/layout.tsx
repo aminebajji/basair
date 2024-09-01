@@ -1,8 +1,16 @@
 import type { Metadata } from "next";
 import { Tajawal } from "next/font/google";
+import { Reem_Kufi_Ink } from "next/font/google";
 
 import "./globals.css";
 import { SiteHeader } from "@/components/layouts/site-header";
+
+// Create a font instance with the desired settings
+const reemKufi = Reem_Kufi_Ink({
+  subsets: ["arabic"],
+  weight: "400",
+  style: "normal",
+});
 
 const tajawal = Tajawal({
   weight: ["400", "700"],
