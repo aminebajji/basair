@@ -3,17 +3,18 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import CurvedUnderline from "./curved-underline";
+import TitleLayout from "./layouts/title-layout";
 
 export default function AboutUs() {
   return (
     <>
-      <div className="bg-gray-50 py-6 lg:py-12">
+      <div className="py-6 lg:py-12">
         <div className="container px-4 md:px-6">
           <div className="grid items-center gap-6 lg:grid-cols-2 lg:gap-12">
-            <div className="space-y-4 px-4">
-              <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl">
-                من نحن
-              </h1>
+            <div className="flex flex-col items-start space-y-4 px-4">
+              <TitleLayout title="من نحن" />
+
               <p className="md:max-w-[600px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
                 نادي بصائر هو نادي ديني دعوي بالمدرسة الوطنية للعلوم التطبيقية
                 بطنجة، هدفه تنظيم الأنشطة الدينية والدعوية، لترسيخ القيم

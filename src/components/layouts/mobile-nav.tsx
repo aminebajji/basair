@@ -27,16 +27,10 @@ export default function MobileNav() {
               الرئيسية
             </Link>
             <Link
-              href="/about"
+              href="#about-section"
               className="text-foreground/60 transition-colors hover:text-foreground"
             >
               من نحن
-            </Link>
-            <Link
-              href="/events"
-              className="text-foreground/60 transition-colors hover:text-foreground"
-            >
-              الفعاليات
             </Link>
             <Link
               href="/activities"
@@ -45,10 +39,12 @@ export default function MobileNav() {
               الأنشطة
             </Link>
             <Link
-              href="/join"
+              href="https://drive.google.com/file/d/1TbSY44MyO6CBHdi32rDUyCEbJSBULFHP/view"
               className="text-foreground/60 transition-colors hover:text-foreground"
+              target="_blank"
+              rel="noopener noreferrer"
             >
-              انضم إلينا
+              ملف النادي
             </Link>
             <Link
               href="/contact"

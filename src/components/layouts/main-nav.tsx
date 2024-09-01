@@ -13,7 +13,7 @@ export function MainNav() {
       </Link>
       <nav className=" flex items-center gap-6 text-sm">
         <Link
-          href=""
+          href="#about-section"
           className="text-foreground/60 transition-colors hover:text-foreground"
         >
           من نحن
@@ -25,10 +25,12 @@ export function MainNav() {
           الأحداث
         </Link>
         <Link
-          href=""
+          href="https://drive.google.com/file/d/1TbSY44MyO6CBHdi32rDUyCEbJSBULFHP/view"
           className="text-foreground/60 transition-colors hover:text-foreground"
+          target="_blank"
+          rel="noopener noreferrer"
         >
-          الأنشطة والبرامج
+          ملف النادي
         </Link>
       </nav>
     </div>

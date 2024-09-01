@@ -4,6 +4,8 @@ import {
   AccordionTrigger,
   AccordionContent,
 } from "@/components/ui/accordion";
+import CurvedUnderline from "./curved-underline";
+import TitleLayout from "./layouts/title-layout";
 
 export default function FrequentlyAskedQuestions() {
   const faqData = [
@@ -30,11 +32,9 @@ export default function FrequentlyAskedQuestions() {
   ];
 
   return (
-    <section className="container py-12 md:py-24">
+    <div className="container py-12 md:py-24">
       <div className="mx-auto max-w-3xl space-y-6 text-center">
-        <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
-          الأسئلة الشائعة
-        </h2>
+        <TitleLayout title="الأسئلة الشائعة" />
         <p className="text-muted-foreground">
           نجيبكم على مجموعة من الأسئلة التي يطرحا كثير من الطلبة المهندسين
         </p>
@@ -51,6 +51,6 @@ export default function FrequentlyAskedQuestions() {
           ))}
         </Accordion>
       </div>
-    </section>
+    </div>
   );
 }

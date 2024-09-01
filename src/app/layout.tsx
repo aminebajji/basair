@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Tajawal } from "next/font/google";
 
 import "./globals.css";
-import { SiteHeader } from "@/components/layout/site-header";
+import { SiteHeader } from "@/components/layouts/site-header";
 
 const tajawal = Tajawal({
   weight: ["400", "700"],

@@ -8,6 +8,14 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 
+interface CurvedUnderlineProps {
+  width?: number;
+  height?: number;
+  startColor?: string;
+  endColor?: string;
+  strokeWidth?: number;
+}
+
 // Sample event data with images
 const events = [
   {
@@ -32,7 +40,7 @@ const events = [
 
 export default function Hero() {
   return (
-    <section className="w-full py-12 md:py-10 lg:py-10 bg-gradient-to-r from-bs-secondary to-primary">
+    <div className="w-full py-12 md:py-10 lg:py-10 bg-gradient-to-r from-bs-secondary to-primary">
       <div className="container sm:flex sm:items-center sm:space-x-2 sm:space-x-reverse px-4 space-y-4 md:px-6">
         <div className="flex flex-col items-center space-y-4">
           <div className="p-4 rounded-xl border-2 border-white">
@@ -75,6 +83,6 @@ export default function Hero() {
           <CarouselNext className="right-2 bg-white/80 hover:bg-white" />
         </Carousel>
       </div>
-    </section>
+    </div>
   );
 }

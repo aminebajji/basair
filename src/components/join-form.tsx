@@ -22,6 +22,26 @@ import {
 } from "@/components/ui/card";
 import { CheckIcon } from "lucide-react";
 
+const LEVEL_OPTIONS = [
+  { value: "1", label: "السنة الأولى" },
+  { value: "2", label: "السنة الثانية" },
+  { value: "3", label: "السنة الثالثة" },
+  { value: "4", label: "السنة الرابعة" },
+  { value: "5", label: "السنة الخامسة" },
+];
+
+const FIELD_OPTIONS = [
+  { value: "AP", label: "AP" },
+  { value: "GINF", label: "GINF" },
+  { value: "GSEA", label: "GSEA" },
+  { value: "GIL", label: "GIL" },
+  { value: "GSTR", label: "GSTR" },
+  { value: "GCYS", label: "GCYS" },
+  { value: "G3EI", label: "G3EI" },
+  { value: "MBISD", label: "MBISD" },
+  { value: "MPSI", label: "MPSI" },
+];
+
 export default function JoinForm() {
   const [isENSAStudent, setIsENSAStudent] = useState(false);
   const [formData, setFormData] = useState({
@@ -159,11 +179,11 @@ export default function JoinForm() {
                     <SelectValue placeholder="اختر المستوى" />
                   </SelectTrigger>
                   <SelectContent>
-                    <SelectItem value="1">1st Year</SelectItem>
-                    <SelectItem value="2">2nd Year</SelectItem>
-                    <SelectItem value="3">3rd Year</SelectItem>
-                    <SelectItem value="4">4th Year</SelectItem>
-                    <SelectItem value="5">5th Year</SelectItem>
+                    {LEVEL_OPTIONS.map(({ value, label }) => (
+                      <SelectItem key={value} value={value} dir="rtl">
+                        {label}
+                      </SelectItem>
+                    ))}
                   </SelectContent>
                 </Select>
               </div>
@@ -181,15 +201,11 @@ export default function JoinForm() {
                     <SelectValue placeholder="اختر الشعبة" />
                   </SelectTrigger>
                   <SelectContent>
-                    <SelectItem value="AP">AP</SelectItem>
-                    <SelectItem value="GINF">GINF</SelectItem>
-                    <SelectItem value="GSEA">GSEA</SelectItem>
-                    <SelectItem value="GIL">GIL</SelectItem>
-                    <SelectItem value="GSTR">GSTR</SelectItem>
-                    <SelectItem value="GCYS">GCYS</SelectItem>
-                    <SelectItem value="G3EI">G3EI</SelectItem>
-                    <SelectItem value="MBISD">MBISD</SelectItem>
-                    <SelectItem value="MPSI">MPSI</SelectItem>
+                    {FIELD_OPTIONS.map(({ value, label }) => (
+                      <SelectItem key={value} value={value}>
+                        {label}
+                      </SelectItem>
+                    ))}
                   </SelectContent>
                 </Select>
               </div>

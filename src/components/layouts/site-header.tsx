@@ -3,9 +3,9 @@ import { Input } from "@/components/ui/input";
 
 import { Button } from "@/components/ui/button";
 
-import { MainNav } from "@/components/layout/main-nav";
+import { MainNav } from "@/components/layouts/main-nav";
 import { Search } from "lucide-react";
-import MobileNav from "@/components/layout/mobile-nav";
+import MobileNav from "@/components/layouts/mobile-nav";
 import Image from "next/image";
 
 export function SiteHeader() {

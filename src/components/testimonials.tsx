@@ -3,6 +3,8 @@ import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Card, CardContent } from "@/components/ui/card";
+import CurvedUnderline from "./curved-underline";
+import TitleLayout from "./layouts/title-layout";
 
 export default function Testimonials() {
   const [shouldReduceMotion, setShouldReduceMotion] = useState(false);
@@ -50,11 +52,9 @@ export default function Testimonials() {
   };
 
   return (
-    <section className="w-full py-12 md:py-24 lg:py-32 bg-gray-100 dark:bg-gray-800">
-      <div className="container px-4 md:px-6">
-        <h2 className="text-3xl font-bold tracking-tight text-center mb-12 sm:text-4xl">
-          كلمات وشهادات
-        </h2>
+    <div className="w-full py-12 md:py-24 lg:py-32">
+      <div className="container px-4 space-y-10">
+        <TitleLayout title="كلمات وشهادات" />
         <motion.div
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
           variants={containerVariants}
@@ -71,7 +71,7 @@ export default function Testimonials() {
               <Card className="bg-white dark:bg-gray-900 h-full">
                 <CardContent className="p-6 flex flex-col justify-between h-full">
                   <blockquote className="text-lg mb-4">
-                    "{testimonial.quote}"
+                    &ldquo;{testimonial.quote}&rdquo;
                   </blockquote>
                   <div className="flex items-center space-x-2 space-x-reverse">
                     <div>
@@ -86,6 +86,6 @@ export default function Testimonials() {
           ))}
         </motion.div>
       </div>
-    </section>
+    </div>
   );
 }

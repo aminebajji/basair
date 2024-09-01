@@ -1,14 +1,12 @@
 import Image from "next/image";
+import CurvedUnderline from "./curved-underline";
+import TitleLayout from "./layouts/title-layout";
 
 export default function Teams() {
   return (
-    <section className="w-full py-12 md:py-12">
+    <div className="w-full py-12 md:py-12">
       <div className="container px-4 md:px-6">
-        <div className="flex flex-col items-center justify-center space-y-4 text-center">
-          <h2 className="text-3xl font-bold tracking-tight text-center mb-12 sm:text-4xl">
-            ننقسم إلى
-          </h2>
-        </div>
+        <TitleLayout title="ننقسم إلى" />
         <div className="mt-8 space-y-8 space-x-reverse md:space-y-12">
           <div className="flex flex-col md:flex-row items-start space-y-4 md:space-y-0 md:space-x-4 md:space-x-reverse">
             <div className="flex items-center justify-center w-12 h-12 rounded-full bg-pink-400"></div>
@@ -34,6 +32,6 @@ export default function Teams() {
           </div>
         </div>
       </div>
-    </section>
+    </div>
   );
 }
