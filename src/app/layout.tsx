@@ -8,6 +8,7 @@ const tajawal = Tajawal({
   weight: ["400", "700"],
   subsets: ["arabic", "latin"],
 });
+
 export const metadata: Metadata = {
   title: "نادي بصائر",
   description: "مرحبًا بكم في الموقع الرسمي لنادي بصائر.",

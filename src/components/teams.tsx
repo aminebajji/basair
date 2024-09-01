@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function Teams() {
   return (
-    <section className="w-full py-12 md:py-24 lg:py-32">
+    <section className="w-full py-12 md:py-12">
       <div className="container px-4 md:px-6">
         <div className="flex flex-col items-center justify-center space-y-4 text-center">
           <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
@@ -17,7 +17,7 @@ export default function Teams() {
               <p className="text-muted-foreground">
                 تهتم لجنة إناث نادي الجيل بصائر بتأطير أَعْضاء النادي الإناث،
                 وتقمن بتوظيف أَعْضاء مكتب جدد، وتحرصن على تنظيم المحاضرات
-                والدورات التي تتهم بقضايا المرأة المسلمة.
+                والدورات الخاصة بهن.
               </p>
             </div>
           </div>
@@ -26,9 +26,9 @@ export default function Teams() {
             <div className="flex-1">
               <h3 className="text-2xl font-bold mb-2">لجنة ذكور</h3>
               <p className="text-muted-foreground">
-                وفي الشق الآخر للنادي يحصر ذكور النادي على توضيف أَعْضاء جدد
+                وفي الشق الآخر للنادي يحرص ذكور النادي على توظيف أَعْضاء جدد
                 ذكور لتولي مختلف مهام المكتب المسير للنادي، وتنظيم محاضرات
-                مشتركة بين الجنسين...
+                ودورات علمية...
               </p>
             </div>
           </div>

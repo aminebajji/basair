@@ -4,6 +4,7 @@ import Hero from "@/components/hero";
 import { SiteHeader } from "@/components/layout/site-header";
 import Image from "next/image";
 import Link from "next/link";
+import FrequentlyAskedQuestions from "@/components/faq";
 
 export default function Home() {
   return (
@@ -11,6 +12,7 @@ export default function Home() {
       <Hero />
       <AboutUs />
       <Teams />
+      <FrequentlyAskedQuestions />
     </>
   );
 }
