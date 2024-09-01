@@ -5,7 +5,7 @@ export default function Teams() {
     <section className="w-full py-12 md:py-12">
       <div className="container px-4 md:px-6">
         <div className="flex flex-col items-center justify-center space-y-4 text-center">
-          <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
+          <h2 className="text-3xl font-bold tracking-tight text-center mb-12 sm:text-4xl">
             ننقسم إلى
           </h2>
         </div>

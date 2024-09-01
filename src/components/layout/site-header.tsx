@@ -14,11 +14,13 @@ export function SiteHeader() {
       <div className="container h-14 flex items-center justify-between space-x-reverse">
         <MainNav />
         <div className="order-2 flex items-center space-x-4 space-x-reverse md:hidden">
-          <div className="flex space-x-4 space-x-reverse md:hidden">
+          <div className="flex space-x-2 space-x-reverse md:hidden">
             <Button className="rounded-xl">ادعمنا</Button>
-            <Button className="rounded-xl" variant="outline">
-              انضم إلينا
-            </Button>
+            <Link href="/join-us">
+              <Button className="rounded-xl" variant="outline">
+                انضم إلينا
+              </Button>
+            </Link>
           </div>
           <MobileNav />
         </div>

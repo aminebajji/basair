@@ -6,6 +6,8 @@ import Image from "next/image";
 import Link from "next/link";
 import FrequentlyAskedQuestions from "@/components/faq";
 
+import Testimonials from "@/components/testimonials";
+
 export default function Home() {
   return (
     <>
@@ -13,6 +15,7 @@ export default function Home() {
       <AboutUs />
       <Teams />
       <FrequentlyAskedQuestions />
+      <Testimonials />
     </>
   );
 }
