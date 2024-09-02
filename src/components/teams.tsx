@@ -27,9 +27,9 @@ export default function Teams() {
                 </Avatar>
               </CardTitle>
               <CardDescription className="text-sm mt-2  max-w-[200px] text-white">
-                تهتم لجنة إناث نادي الجيل بصائر بتأطير أَعْضاء النادي الإناث،
-                وتقمن بتوظيف أَعْضاء مكتب جدد، وتحرصن على تنظيم المحاضرات
-                والدورات الخاصة بهن.
+                تهتم لجنة إناث نادي بصائر بتأطير أَعْضاء النادي الإناث، وتقمن
+                بتوظيف أَعْضاء مكتب جدد، وتحرصن على تنظيم المحاضرات والدورات
+                الخاصة بهن.
               </CardDescription>
             </Card>
             <Card className="p-14 rounded-full  bg-white w-full max-w-[280px] drop-shadow-xl shadow-black/10 dark:shadow-white/10 bg-gradient-to-br from-primary to-black">
