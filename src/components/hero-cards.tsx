@@ -39,7 +39,7 @@ const HeroCards: React.FC = () => {
   ];
 
   return (
-    <div className="grid grid-cols-2 gap-6">
+    <div className="space-y-2 sm:flex sm:flex-col md:grid md:grid-cols-2 md:gap-6 md:space-y-0">
       {cards.map((card, index) => (
         <Card
           key={index}

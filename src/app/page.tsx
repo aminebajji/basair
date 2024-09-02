@@ -20,17 +20,14 @@ export default function Home() {
       <section id="about-section">
         <AboutUs />
       </section>
-      <Separator className="mx-auto w-1/2" />
       <section id="teams-section">
         <Teams />
       </section>
-      <Separator className="mx-auto w-1/2" />
-      <section id="faq-section">
-        <FrequentlyAskedQuestions />
-      </section>
-      <Separator className="mx-auto w-1/2" />
       <section id="testimonials-section">
         <Testimonials />
+      </section>
+      <section id="faq-section">
+        <FrequentlyAskedQuestions />
       </section>
       <Activities />
     </>
