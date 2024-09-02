@@ -17,12 +17,11 @@ const TitleLayout: React.FC<TitleLayoutProps> = ({
     <div className="flex flex-col items-center justify-center space-y-4 text-center">
       <h2
         className={cn(
-          "text-3xl font-bold tracking-tight sm:text-4xl relative",
+          "text-3xl font-bold tracking-tight sm:text-4xl ",
           textColor ? textColor : "text-primary"
         )}
       >
         {title}
-        <CurvedUnderline />
       </h2>
       {children}
     </div>

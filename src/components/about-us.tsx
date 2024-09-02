@@ -23,9 +23,9 @@ export default function AboutUs() {
               </p>
             </div>
             <Image
-              src="/ensat.png"
+              src="/basair-green.png"
               width="600"
-              height="400"
+              height="800"
               alt="Hero"
               className="mx-auto aspect-video overflow-hidden rounded-xl object-cover object-center"
             />

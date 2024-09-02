@@ -6,6 +6,7 @@ import {
 } from "@/components/ui/accordion";
 import CurvedUnderline from "./curved-underline";
 import TitleLayout from "./layouts/title-layout";
+import SvgDivider from "./svg-divider";
 
 export default function FrequentlyAskedQuestions() {
   const faqData = [
@@ -32,25 +33,29 @@ export default function FrequentlyAskedQuestions() {
   ];
 
   return (
-    <div className="container py-12 md:py-24">
-      <div className="mx-auto max-w-3xl space-y-6 text-center">
-        <TitleLayout title="الأسئلة الشائعة" />
-        <p className="text-muted-foreground">
-          نجيبكم على مجموعة من الأسئلة التي يطرحا كثير من الطلبة المهندسين
-        </p>
+    <section className="relative w-full bg-gradient-to-br from-primary to-black overflow-hidden">
+      <SvgDivider position="top" />
+      <div className="container py-48">
+        <div className="mx-auto max-w-3xl space-y-6 text-center">
+          <TitleLayout title="الأسئلة الشائعة" textColor="text-white" />
+          <p className="text-muted-foreground text-white">
+            نجيبكم على مجموعة من الأسئلة التي يطرحا كثير من الطلبة المهندسين
+          </p>
+        </div>
+        <div className="mx-auto mt-12 max-w-3xl space-y-4 text-white">
+          <Accordion type="single" collapsible>
+            {faqData.map((item, index) => (
+              <AccordionItem key={index} value={`item-${index + 1}`}>
+                <AccordionTrigger>{item.question}</AccordionTrigger>
+                <AccordionContent>
+                  <p>{item.answer}</p>
+                </AccordionContent>
+              </AccordionItem>
+            ))}
+          </Accordion>
+        </div>
       </div>
-      <div className="mx-auto mt-12 max-w-3xl space-y-4">
-        <Accordion type="single" collapsible>
-          {faqData.map((item, index) => (
-            <AccordionItem key={index} value={`item-${index + 1}`}>
-              <AccordionTrigger>{item.question}</AccordionTrigger>
-              <AccordionContent>
-                <p>{item.answer}</p>
-              </AccordionContent>
-            </AccordionItem>
-          ))}
-        </Accordion>
-      </div>
-    </div>
+      <SvgDivider position="bottom" />
+    </section>
   );
 }
