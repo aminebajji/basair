@@ -21,19 +21,13 @@ export default function MobileNav() {
           </Link>
           <nav className="flex flex-col gap-3 lg:gap-4 mt-6">
             <Link
-              href="/"
-              className="text-foreground/60 transition-colors hover:text-foreground"
-            >
-              الرئيسية
-            </Link>
-            <Link
               href="#about-section"
               className="text-foreground/60 transition-colors hover:text-foreground"
             >
               من نحن
             </Link>
             <Link
-              href="/activities"
+              href="#activities-section"
               className="text-foreground/60 transition-colors hover:text-foreground"
             >
               الأنشطة
@@ -47,7 +41,7 @@ export default function MobileNav() {
               ملف النادي
             </Link>
             <Link
-              href="/contact"
+              href="#contact-section"
               className="text-foreground/60 transition-colors hover:text-foreground"
             >
               تواصل معنا

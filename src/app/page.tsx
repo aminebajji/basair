@@ -9,6 +9,7 @@ import Testimonials from "@/components/testimonials";
 import { Separator } from "@/components/ui/separator";
 import Activities from "@/components/activites";
 import { Hero } from "@/components/hero";
+import ContactUs from "@/components/contact-us";
 
 export default function Home() {
   return (
@@ -29,7 +30,12 @@ export default function Home() {
       <section id="faq-section">
         <FrequentlyAskedQuestions />
       </section>
-      <Activities />
+      <section id="activities-section">
+        <Activities />
+      </section>
+      <section id="contact-section">
+        <ContactUs />
+      </section>
     </>
   );
 }

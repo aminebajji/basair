@@ -19,10 +19,10 @@ export function MainNav() {
           من نحن
         </Link>
         <Link
-          href=""
+          href="#activities-section"
           className="text-foreground/60 transition-colors hover:text-foreground"
         >
-          الأحداث
+          الأنشطة
         </Link>
         <Link
           href="https://drive.google.com/file/d/1TbSY44MyO6CBHdi32rDUyCEbJSBULFHP/view"
@@ -31,6 +31,12 @@ export function MainNav() {
           rel="noopener noreferrer"
         >
           ملف النادي
+        </Link>
+        <Link
+          href="#contact-section"
+          className="text-foreground/60 transition-colors hover:text-foreground"
+        >
+          تواصل معنا
         </Link>
       </nav>
     </div>

@@ -72,3 +72,7 @@ html {
   direction: rtl;
   text-align: right;
 }
+
+html {
+  scroll-behavior: smooth;
+}

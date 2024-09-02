@@ -1,5 +1,6 @@
 import Link from "next/link";
 import SvgDivider from "./svg-divider";
+import ContactUs from "./contact-us";
 
 export default function Footer() {
   return (
@@ -8,7 +9,7 @@ export default function Footer() {
       <footer className="text-muted-foreground pb-12 pt-32 md:pt-44 md:pb-12">
         <div className="container max-w-7xl grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-8 text-white">
           <div className="grid gap-4">
-            <h3 className="text-lg font-bold">Girls Team</h3>
+            <h3 className="text-lg font-bold">لجنة الذكور</h3>
             <div className="flex flex-col gap-2">
               <Link
                 href="#"
@@ -16,7 +17,7 @@ export default function Footer() {
                 prefetch={false}
               >
                 <FacebookIcon className="w-5 h-5" />
-                <span>Facebook</span>
+                <span>فيسبوك</span>
               </Link>
               <Link
                 href="#"
@@ -24,7 +25,7 @@ export default function Footer() {
                 prefetch={false}
               >
                 <TwitterIcon className="w-5 h-5" />
-                <span>Twitter</span>
+                <span>تويتر</span>
               </Link>
               <Link
                 href="#"
@@ -32,12 +33,12 @@ export default function Footer() {
                 prefetch={false}
               >
                 <InstagramIcon className="w-5 h-5" />
-                <span>Instagram</span>
+                <span>إنستغرام</span>
               </Link>
             </div>
           </div>
           <div className="grid gap-4">
-            <h3 className="text-lg font-bold">Boys Team</h3>
+            <h3 className="text-lg font-bold">لجنة الإناث</h3>
             <div className="flex flex-col gap-2">
               <Link
                 href="#"
@@ -45,7 +46,7 @@ export default function Footer() {
                 prefetch={false}
               >
                 <FacebookIcon className="w-5 h-5" />
-                <span>Facebook</span>
+                <span>فيسبوك</span>
               </Link>
               <Link
                 href="#"
@@ -53,7 +54,7 @@ export default function Footer() {
                 prefetch={false}
               >
                 <TwitterIcon className="w-5 h-5" />
-                <span>Twitter</span>
+                <span>تويتر</span>
               </Link>
               <Link
                 href="#"
@@ -61,51 +62,13 @@ export default function Footer() {
                 prefetch={false}
               >
                 <InstagramIcon className="w-5 h-5" />
-                <span>Instagram</span>
-              </Link>
-            </div>
-          </div>
-          <div className="grid gap-4">
-            <h3 className="text-lg font-bold">About</h3>
-            <div className="flex flex-col gap-2">
-              <Link href="#" className="hover:underline" prefetch={false}>
-                Our Mission
-              </Link>
-              <Link href="#" className="hover:underline" prefetch={false}>
-                Our History
-              </Link>
-              <Link href="#" className="hover:underline" prefetch={false}>
-                Contact Us
-              </Link>
-            </div>
-          </div>
-          <div className="grid gap-4 text-white">
-            <h3 className="text-lg font-bold">Legal</h3>
-            <div className="flex flex-col gap-2">
-              <Link href="#" className="hover:underline" prefetch={false}>
-                Privacy Policy
-              </Link>
-              <Link href="#" className="hover:underline" prefetch={false}>
-                Terms of Service
-              </Link>
-              <Link href="#" className="hover:underline" prefetch={false}>
-                Cookie Policy
+                <span>إنستغرام</span>
               </Link>
             </div>
           </div>
         </div>
         <div className="container max-w-7xl mt-8 flex items-center justify-between text-white">
-          <p className="text-sm">
-            &copy; 2024 Sports Teams. All rights reserved.
-          </p>
-          <div className="flex items-center gap-4">
-            <Link href="#" className="hover:underline" prefetch={false}>
-              Privacy Policy
-            </Link>
-            <Link href="#" className="hover:underline" prefetch={false}>
-              Terms of Service
-            </Link>
-          </div>
+          <p className="text-sm">&copy; 2024 نادي بصائر. جميع الحقوق محفوظة.</p>
         </div>
       </footer>
     </section>
