@@ -27,7 +27,7 @@ export default function Home() {
       <section id="testimonials-section">
         <Testimonials />
       </section>
-      <section id="faq-section">
+      <section id="faq-section" className="bg-primary">
         <FrequentlyAskedQuestions />
       </section>
       <section id="activities-section">
