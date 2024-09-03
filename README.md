@@ -16,7 +16,7 @@ Welcome to the Basair Club landing page repository! This project represents the 
 
 Here’s a glimpse of the hero section of our landing page:
 
-![Hero Image](publiv/hero.png)
+![Hero Image](public/hero.png)
 
 ### 🤗 Join Us
 
