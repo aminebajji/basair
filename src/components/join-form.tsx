@@ -42,6 +42,9 @@ const FIELD_OPTIONS = [
   { value: "MPSI", label: "MPSI" },
 ];
 
+
+
+
 export default function JoinForm() {
   const [isENSAStudent, setIsENSAStudent] = useState(false);
   const [formData, setFormData] = useState({
@@ -54,6 +57,7 @@ export default function JoinForm() {
     gender: "male",
   });
   const [formSubmitted, setFormSubmitted] = useState(false);
+
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>
@@ -83,8 +87,8 @@ export default function JoinForm() {
         },
         body: JSON.stringify({
           to: formData.email,
-          subject: "Form Submission Confirmation",
-          text: `Hello ${formData.firstName},\n\nThank you for your submission!`,
+          subject: "تأكيد الانضمام لنادي بصائر",
+          firstName: formData.firstName,
         }),
       });
       console.log("Email sent successfully");
