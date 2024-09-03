@@ -1,5 +1,7 @@
 # 📚 Basair Club Landing Page
 
+![Hero Image](public/hero.png)
+
 Welcome to the Basair Club landing page repository! This project represents the online presence of the Basair Club, a religious and educational organization based at the National School of Applied Sciences in Tangier.
 
 ## 🌟 About Basair Club
@@ -11,12 +13,6 @@ Welcome to the Basair Club landing page repository! This project represents the 
 - **🌱 Spiritual Growth**: We aim to provide a platform for students to deepen their understanding of Islam and strengthen their connection with their faith.
 - **📚 Educational Activities**: Through lectures, workshops, and study sessions, we help students gain essential knowledge about their religion.
 - **🤝 Community Building**: We foster a supportive community where students can find like-minded peers who share their values and goals.
-
-### 🖼️ Hero Section
-
-Here’s a glimpse of the hero section of our landing page:
-
-![Hero Image](public/hero.png)
 
 ### 🤗 Join Us
 
