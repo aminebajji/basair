@@ -3,7 +3,7 @@
 ![Hero Image](public/hero.png)
 
 Welcome to the Basair Club landing page repository! This project represents the online presence of the Basair Club, a religious and educational organization based at the National School of Applied Sciences in Tangier.
-
+test
 ## 🌟 About Basair Club
 
 **Basair Club** is a student-run religious and educational club dedicated to promoting Islamic values and knowledge among engineering students. Our mission is to organize various activities, including religious lectures, study circles, and community service projects, to help students strengthen their faith and understanding of Islam.
