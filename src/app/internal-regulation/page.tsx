@@ -1,5 +1,14 @@
-import JoinForm from "@/components/join-form";
+import React from 'react';
+import dynamic from 'next/dynamic';
 
-export default function InternalRegulation() {
-  return <div className="p-4">internal regulation</div>;
-}
+import InternRules from '@/components/intern-rules';
+
+const MyPage = () => {
+  return (
+    
+      <InternRules />
+
+  );
+};
+
+export default MyPage;

@@ -1,7 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import nodemailer from "nodemailer";
 import generateEmailContent from "../../../components/email-template"
-
 const transporter = nodemailer.createTransport({
   service: "Gmail",
   auth: {
@@ -12,18 +11,19 @@ const transporter = nodemailer.createTransport({
 
 
 
+
 export async function POST(req: NextRequest) {
   try {
-    const { to, subject, firstName } = await req.json();
-    const message=`شكرًا لك ${firstName} على اهتمامك بالانضمام إلى نادينا. نحن سعداء بانضمامك ونتطلع إلى التواصل معك قريبًا`;
+    const {name, email, subject, message } = await req.json();
+
     const mailOptions = {
-      from: process.env.EMAIL_USER,
-      to,
+      to: process.env.EMAIL_USER,
+      from:email,
       subject,
       message,
       alternatives: [{
         contentType: "text/html",
-        content: generateEmailContent(message),
+        content: generateEmailContent(name,message),
       }]
     };
 

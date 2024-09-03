@@ -11,11 +11,49 @@ import { CheckIcon } from "lucide-react"; // Adjust the import based on your pro
 
 export default function ContactUs() {
   const [formSubmitted, setFormSubmitted] = useState(false);
+  const [formData, setFormData] = useState({
+    name: "",
+    email:'',
+    subject:" مرحبا أريد تواصل معكم",
+    message: "",
+  });
 
-  const handleSubmit = (event: any) => {
-    event.preventDefault();
-    setFormSubmitted(true);
+ 
+
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
+  ) => {
+    const { id, value, type } = e.target;
+    setFormData((prevData) => ({
+      ...prevData,
+      [id]:
+        type === "checkbox" ? (e.target as HTMLInputElement).checked : value,
+    }));
   };
+
+
+  const handleSubmit = async (event: React.FormEvent) => {
+    event.preventDefault();
+    try {
+      await fetch("/api/recieve-email", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          from:formData.email,
+          name: formData.name,
+          subject: " تواصل معنا : طلب استفسار",
+          message:formData.message,
+        }),
+      });
+      console.log("Email sent successfully");
+      setFormSubmitted(true);
+    } catch (error) {
+      console.error("Error sending email:", error);
+    }
+  };
+
 
   return (
     <section className="w-full py-12 md:py-24 lg:py-32">
@@ -36,6 +74,7 @@ export default function ContactUs() {
                   id="name"
                   placeholder="أدخل اسمك"
                   className="focus-visible:ring-primary"
+                  onChange={handleChange}
                 />
               </div>
               <div className="grid gap-2">
@@ -45,6 +84,7 @@ export default function ContactUs() {
                   type="email"
                   placeholder="أدخل بريدك الإلكتروني"
                   className="focus-visible:ring-primary"
+                  onChange={handleChange}
                 />
               </div>
               <div className="grid gap-2">
@@ -53,6 +93,7 @@ export default function ContactUs() {
                   id="message"
                   placeholder="أخبرنا كيف يمكننا المساعدة"
                   className="min-h-[150px] focus-visible:ring-primary"
+                  onChange={handleChange}
                 />
               </div>
               <Button type="submit" className="w-full">
