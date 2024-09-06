@@ -12,6 +12,8 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { Switch } from "@/components/ui/switch";
+import { Textarea } from "@/components/ui/textarea";
+
 import {
   Card,
   CardHeader,
@@ -55,12 +57,13 @@ export default function JoinForm() {
     level: "",
     field: "",
     gender: "male",
+    motivation:''
   });
   const [formSubmitted, setFormSubmitted] = useState(false);
 
 
   const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>
+    e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>
   ) => {
     const { id, value, type } = e.target;
     setFormData((prevData) => ({
@@ -89,6 +92,7 @@ export default function JoinForm() {
           to: formData.email,
           subject: "تأكيد الانضمام لنادي بصائر",
           firstName: formData.firstName,
+          gender:formData.gender // to identify the Team
         }),
       });
       console.log("Email sent successfully");
@@ -235,6 +239,18 @@ export default function JoinForm() {
                 <Label htmlFor="female">أنثى</Label>
               </div>
             </RadioGroup>
+          </div>
+          <div className="space-y-2">
+            <Label htmlFor="motivation">ما هو دافعك للانضمام إلى نادي بصائر؟</Label>
+            <Textarea
+              id="motivation"
+              className="focus-visible:ring-primary"
+              rows={4}
+              value={formData.motivation}
+              onChange={handleChange}
+              placeholder="اكتب دافعك هنا..."
+              dir="rtl"
+            />
           </div>
           <CardFooter>
             <Button type="submit" className="w-full">
