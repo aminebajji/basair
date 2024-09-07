@@ -41,16 +41,16 @@ const generateEmailContent = (name: string = '', message: string = '', isSender:
                                         <div style="margin-top: 15px;">
                                     
                                             <a href="https://www.instagram.com/basairclubndy/?igsh=MXV4ejB2OHBmb3pudA%3D%3D" style="text-decoration: none; margin: 0 10px; display: inline-block;">
-                                                <img src="https://cdn3.iconfinder.com/data/icons/social-network-30/512/social-03-1024.png" alt="YouTube" style="width: 36px; height: 36px;">
+                                                <img src="https://basair.vercel.app/instagram.png" alt="instagram" style="width: 36px; height: 36px;">
                                             </a>
                                             <a href="https://web.facebook.com/profile.php?id=61564990312686" style="text-decoration: none; margin: 0 10px; display: inline-block;">
-                                                <img src="https://cdn3.iconfinder.com/data/icons/social-network-30/512/social-02-1024.png" alt="Facebook" style="width: 36px; height: 36px;">
+                                                <img src="https://basair.vercel.app/facebook.png" alt="Facebook" style="width: 36px; height: 36px;">
                                             </a>
                                              <a href="https://whatsapp.com/channel/0029VaoJq9pJP2167dZn730K" style="text-decoration: none; margin: 0 10px; display: inline-block;">
-                                                <img src="https://cdn3.iconfinder.com/data/icons/social-network-30/512/social-01-1024.png" alt="Facebook" style="width: 36px; height: 36px;">
+                                                <img src="https://basair.vercel.app/whatsapp.png" alt="whatsap" style="width: 36px; height: 36px;">
                                             </a>
                                              <a href="https://t.me/+G-B7d1hteuRhYWE0" style="text-decoration: none; margin: 0 10px; display: inline-block;">
-                                                <img src="https://cdn3.iconfinder.com/data/icons/social-network-30/512/social-07-1024.png" alt="Facebook" style="width: 36px; height: 36px;">
+                                                <img src="https://basair.vercel.app/telegram.png" alt="telegram" style="width: 36px; height: 36px;">
                                             </a>
                                         </div>
                                     </td>
