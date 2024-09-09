@@ -8,18 +8,59 @@ import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import TitleLayout from "./layouts/title-layout";
 import { CheckIcon } from "lucide-react"; // Adjust the import based on your project structure
+import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 
 export default function ContactUs() {
   const [formSubmitted, setFormSubmitted] = useState(false);
+  const [formData, setFormData] = useState({
+    name: "",
+    email: '',
+    gender: "male",
+    subject: " مرحبا أريد تواصل معكم",
+    message: "",
+  });
 
-  const handleSubmit = (event: any) => {
-    event.preventDefault();
-    setFormSubmitted(true);
+
+
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
+  ) => {
+    const { id, value, type } = e.target;
+    setFormData((prevData) => ({
+      ...prevData,
+      [id]:
+        type === "checkbox" ? (e.target as HTMLInputElement).checked : value,
+    }));
   };
+
+
+  const handleSubmit = async (event: React.FormEvent) => {
+    event.preventDefault();
+    try {
+      await fetch("/api/recieve-email", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          from: formData.email,
+          name: formData.name,
+          gender:formData.gender,// to identify the Team 
+          subject: " تواصل معنا : طلب استفسار",
+          message: formData.message,
+        }),
+      });
+      console.log("Email sent successfully");
+      setFormSubmitted(true);
+    } catch (error) {
+      console.error("Error sending email:", error);
+    }
+  };
+
 
   return (
     <section className="w-full py-12 md:py-24 lg:py-32">
-      <div className="container grid items-center gap-8 px-4 md:px-6">
+      <div className="container grid items-center gap-8 px-4 md:px-6 lg:w-7/12 ">
         <div className="mx-auto max-w-3xl space-y-6 text-center">
           <TitleLayout title="تواصل معنا" />
           <p className="max-w-[600px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
@@ -27,7 +68,7 @@ export default function ContactUs() {
             ممكن إن شاء الله.
           </p>
         </div>
-        <Card className="w-full max-w-md mx-auto p-4">
+        <Card className="w-full  mx-auto p-4 lg:w-full">
           <CardContent>
             <form className="grid gap-4" onSubmit={handleSubmit}>
               <div className="grid gap-2">
@@ -35,7 +76,9 @@ export default function ContactUs() {
                 <Input
                   id="name"
                   placeholder="أدخل اسمك"
+                  required
                   className="focus-visible:ring-primary"
+                  onChange={handleChange}
                 />
               </div>
               <div className="grid gap-2">
@@ -43,8 +86,10 @@ export default function ContactUs() {
                 <Input
                   id="email"
                   type="email"
+                  required
                   placeholder="أدخل بريدك الإلكتروني"
                   className="focus-visible:ring-primary"
+                  onChange={handleChange}
                 />
               </div>
               <div className="grid gap-2">
@@ -52,8 +97,29 @@ export default function ContactUs() {
                 <Textarea
                   id="message"
                   placeholder="أخبرنا كيف يمكننا المساعدة"
+                  required
                   className="min-h-[150px] focus-visible:ring-primary"
+                  onChange={handleChange}
                 />
+              </div>
+              <div className="space-y-2">
+                <Label>الجنس</Label>
+                <RadioGroup
+                  defaultValue={formData.gender}
+                  dir="rtl"
+                  onValueChange={(value) =>
+                    setFormData((prev) => ({ ...prev, gender: value }))
+                  }
+                >
+                  <div className="flex items-center space-x-2 space-x-reverse">
+                    <RadioGroupItem value="male" id="male" />
+                    <Label htmlFor="male">ذكر</Label>
+                  </div>
+                  <div className="flex items-center space-x-2 space-x-reverse">
+                    <RadioGroupItem value="female" id="female" />
+                    <Label htmlFor="female">أنثى</Label>
+                  </div>
+                </RadioGroup>
               </div>
               <Button type="submit" className="w-full">
                 إرسال

@@ -3,27 +3,19 @@ import nodemailer from "nodemailer";
 import generateEmailContent from "../../../components/email-template"
 
 
-
-
-
-
-
 export async function POST(req: NextRequest) {
   try {
-   
-    const { to, subject, firstName,gender } = await req.json();
-    const message = gender==="male" 
-    ? ` السلام عليكم ورحمة الله وبركاته مرحبا بك اخي ${firstName} شكرًا لك  على اهتمامك بالانضمام إلى نادينا. نحن سعداء بانضمامك ونتطلع إلى التواصل معك قريبًا`
-    :` السلام عليكم ورحمة الله وبركاته مرحبا بك اختي ${firstName} شكرًا لك  على اهتمامك بالانضمام إلى نادينا. نحن سعداء بانضمامك ونتطلع إلى التواصل معك قريبًا`;
-    
+    const {name, email, subject, message ,gender} = await req.json();
+    const  isSender=false;// overide default value of button, just for show or not show the button (visite our site) in the message
+    const Message= `${message} ${gender==="male" ? 'male':'femle'}`
     const mailOptions = {
-      from: gender === "male" ? process.env.EMAIL_BOY_USER : process.env.EMAIL_GIRL_USER,
-      to,
+      to: gender === "male" ? process.env.EMAIL_BOY_USER : process.env.EMAIL_GIRL_USER,
+      from: email,
       subject,
-      message,
+      message:Message,
       alternatives: [{
         contentType: "text/html",
-        content: generateEmailContent(firstName,message),
+        content: generateEmailContent(name,Message,isSender),
       }]
     };
 
